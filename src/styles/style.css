@@ -1,0 +1,326 @@
+@font-face {
+  font-family: "BrandingAliskaje";
+  src: url("../../fonts/BrandingAliskaje.ttf");
+}
+
+@font-face {
+  font-family: "Chemre";
+  src: url("../../fonts/Chemre.ttf");
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+body,
+html {
+  height: 100%;
+  background-color: #252525 !important;
+  overflow: auto;
+  position: relative;
+}
+
+h1 {
+  font-family: "Chemre";
+  font-size: 165px !important;
+  text-decoration: none;
+  color: #c9af96;
+}
+
+h2 {
+  font-family: "Chemre";
+  font-size: 135px !important;
+  text-decoration: none;
+  color: #c9af96;
+}
+
+h3 {
+  font-family: "Chemre";
+  font-size: 110px !important;
+  text-decoration: none;
+  color: #c9af96;
+}
+
+h4 {
+  font-family: "Chemre";
+  font-size: 90px !important;
+  text-decoration: none;
+  color: #c9af96;
+}
+
+h5 {
+  font-family: "Chemre";
+  font-size: 70px !important;
+  text-decoration: none;
+  color: #c9af96;
+}
+
+.small-par {
+  font-size: 10px;
+  font-family: "BrandingAliskaje";
+  color: #c9af96;
+}
+
+.medium-par {
+  font-size: 20px;
+  font-family: "BrandingAliskaje";
+  color: #c9af96;
+}
+
+.large-par {
+  font-family: "Chemre";
+  font-size: 50px !important;
+  text-decoration: none;
+  color: #c9af96;
+}
+
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 100%;
+  border: 1px solid #c9af96;
+  background-color: #252525;
+  margin: 30px;
+}
+
+.content .pic {
+  width: 40%;
+  height: 100%;
+  border-right: 1px solid #c9af96;
+  position: relative;
+  -webkit-animation: fadein 1s;
+          animation: fadein 1s;
+}
+
+.content .pic .painter {
+  right: 5%;
+  top: 8%;
+  width: 130px;
+  position: absolute;
+  -webkit-animation: fadein 4s;
+          animation: fadein 4s;
+}
+
+.content .pic .painter p:nth-of-type(2) {
+  text-align: right;
+}
+
+.content .pic .born {
+  top: 40%;
+  position: absolute;
+  left: 5%;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
+}
+
+.content .pic .died {
+  bottom: 5%;
+  position: absolute;
+  right: 5%;
+  -webkit-animation: fadein 3s;
+          animation: fadein 3s;
+}
+
+.content .pic .born .medium-par,
+.content .pic .died .medium-par {
+  text-align: right;
+}
+
+.content .pic .born p,
+.content .pic .died p {
+  margin-top: -10px;
+  margin-bottom: 0;
+}
+
+.content .pic .impressionism {
+  position: absolute;
+  bottom: 15%;
+  left: 5%;
+  -webkit-animation: fadein 5s;
+          animation: fadein 5s;
+}
+
+.content .pic img {
+  width: 100%;
+  bottom: 1px;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+}
+
+.content .text {
+  width: 60%;
+  position: relative;
+}
+
+.content .text .monet h4,
+.content .text .monet h1,
+.content .text .monet h2 {
+  position: absolute;
+}
+
+.content .text .monet h4 {
+  right: 100px;
+  top: 30px;
+}
+
+.content .text .monet h1 {
+  top: 130px;
+  left: 40px;
+}
+
+.content .text .monet h2 {
+  top: 300px;
+  right: 20px;
+}
+
+.content #artworks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: absolute;
+  bottom: 0;
+  margin-left: 5%;
+  width: 90%;
+}
+
+.content #artworks .artwork {
+  width: 80%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.content #artworks .artwork p {
+  cursor: pointer;
+}
+
+.to-fade-in {
+  opacity: 0;
+}
+
+.to-fade-in.fadein {
+  -webkit-animation: fadein 4s forwards;
+          animation: fadein 4s forwards;
+}
+
+.fadeout {
+  -webkit-animation: fadeout 0.7s;
+          animation: fadeout 0.7s;
+}
+
+.fadein {
+  -webkit-animation: fadein 0.7s;
+          animation: fadein 0.7s;
+}
+
+#selected-artwork,
+#close {
+  display: none;
+}
+
+#selected-artwork.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  background-color: #252525;
+}
+
+#selected-artwork.show img {
+  width: 99%;
+}
+
+#close.show {
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  color: #c9af96;
+  font-size: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 25px;
+  width: 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+#title {
+  text-align: right;
+  margin-right: 10px;
+}
+
+#info {
+  margin: 70px 20px;
+  text-align: justify;
+}
+
+#artwork-src {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#year {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  left: -30px;
+  position: absolute;
+  top: 25%;
+}
