@@ -1,21 +1,3 @@
-//Refrences
-const womenInGarden = document.getElementById("women-in-garden");
-const springFlowers = document.getElementById("spring-flowers");
-const impressionSunrise = document.getElementById("impression-sunrise");
-const camilleMonetChild = document.getElementById("camille-monet-child");
-const promenade = document.getElementById("promenade");
-const poplarsGiverny = document.getElementById("poplars-giverny");
-const irisesInGarden = document.getElementById("irises-in-garden");
-const waterLilyPond = document.getElementById("water-lily-pond");
-
-const monetContent = document.getElementById("monet-content");
-const selectedArtwork = document.getElementById("selected-artwork");
-const artworkSrc = document.getElementById("artwork-src");
-const title = document.getElementById("title");
-const info = document.getElementById("info");
-const close = document.getElementById("close");
-const yearId = document.getElementById("year");
-
 let artwork = [
   {
     title: "Women in the garden",
@@ -84,7 +66,23 @@ const artworksDiv = () => {
   artworks.append(colTwo);
 };
 artworksDiv();
+//Refrences
+const womenInGarden = document.getElementById("women-in-garden");
+const springFlowers = document.getElementById("spring-flowers");
+const impressionSunrise = document.getElementById("impression-sunrise");
+const camilleMonetChild = document.getElementById("camille-monet-child");
+const promenade = document.getElementById("promenade");
+const poplarsGiverny = document.getElementById("poplars-giverny");
+const irisesInGarden = document.getElementById("irises-in-garden");
+const waterLilyPond = document.getElementById("water-lily-pond");
 
+const monetContent = document.getElementById("monet-content");
+const selectedArtwork = document.getElementById("selected-artwork");
+const artworkSrc = document.getElementById("artwork-src");
+const title = document.getElementById("title");
+const info = document.getElementById("info");
+const close = document.getElementById("close");
+const yearId = document.getElementById("year");
 //Display content on click
 const activeWork = (target, src, titleHTML, text, year) => {
   target.addEventListener("click", function (e) {
