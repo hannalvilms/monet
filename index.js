@@ -1,3 +1,21 @@
+//Refrences
+const womenInGarden = document.getElementById("women-in-garden");
+const springFlowers = document.getElementById("spring-flowers");
+const impressionSunrise = document.getElementById("impression-sunrise");
+const camilleMonetChild = document.getElementById("camille-monet-child");
+const promenade = document.getElementById("promenade");
+const poplarsGiverny = document.getElementById("poplars-giverny");
+const irisesInGarden = document.getElementById("irises-in-garden");
+const waterLilyPond = document.getElementById("water-lily-pond");
+
+const monetContent = document.getElementById("monet-content");
+const selectedArtwork = document.getElementById("selected-artwork");
+const artworkSrc = document.getElementById("artwork-src");
+const title = document.getElementById("title");
+const info = document.getElementById("info");
+const close = document.getElementById("close");
+const yearId = document.getElementById("year");
+
 let artwork = [
   {
     title: "Women in the garden",
@@ -41,8 +59,8 @@ let artwork = [
   },
 ];
 
+//Display artworks on front page
 const artworks = document.getElementById("artworks");
-
 const loopArtworks = (start, end) => {
   var list = document.createElement("div");
   list.innerHTML = "";
@@ -67,48 +85,41 @@ const artworksDiv = () => {
 };
 artworksDiv();
 
-const womenInGarden = document.getElementById("women-in-garden");
-const springFlowers = document.getElementById("spring-flowers");
-const impressionSunrise = document.getElementById("impression-sunrise");
-const camilleMonetChild = document.getElementById("camille-monet-child");
-const promenade = document.getElementById("promenade");
-const poplarsGiverny = document.getElementById("poplars-giverny");
-const irisesInGarden = document.getElementById("irises-in-garden");
-const waterLilyPond = document.getElementById("water-lily-pond");
-
-const selectedArtwork = document.getElementById("selected-artwork");
-const artworkSrc = document.getElementById("artwork-src");
-const title = document.getElementById("title");
-const info = document.getElementById("info");
-const close = document.getElementById("close");
-const yearId = document.getElementById("year");
-
-
+//Display content on click
 const activeWork = (target, src, titleHTML, text, year) => {
   target.addEventListener("click", function (e) {
+    //Scroll to top
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
     document.body.scrollTo({
       top: 0,
       left: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
-    selectedArtwork.classList.add("fadein");
-    selectedArtwork.classList.add("show");
+    //fadein and show elements
+    selectedArtwork.classList.add("fadein", "show");
     close.classList.add("show");
+    //Remove fadeout if exists
     if (selectedArtwork.classList.contains("fadeout")) {
       selectedArtwork.classList.remove("fadeout");
     }
+
+    //Add parameters
     artworkSrc.src = src;
     title.innerHTML = titleHTML;
     info.innerHTML = `<p class="medium-par">${text}</p>`;
     yearId.innerText = year;
 
+    //Close element + fadeout
     close.addEventListener("click", function (e) {
       selectedArtwork.classList.remove("fadein");
       selectedArtwork.classList.add("fadeout");
       setTimeout(function () {
         selectedArtwork.classList.remove("show");
       }, 700);
-
       close.classList.remove("show");
     });
   });
@@ -137,8 +148,8 @@ activeWork(
   impressionSunrise,
   "./media/impressionSunrise.jpg",
   `
-    <h4>impression,</h4>
-    <h1>sunrise</h1>
+    <h4 class="title-smaller">impression,</h4>
+    <h1 class="title-smaller">sunrise</h1>
     `,
   "Impression, Sunrise (French: Impression, soleil levant).  Shown at what would later be known as the “Exhibition of the Impressionists” in April 1874, the painting is attributed to giving rise to the name of the Impressionist movement. Impression, Sunrise depicts the port of Le Havre, Monet’s hometown, and is his most famous painting of the harbor. Impression, Sunrise is displayed at the Musée Marmottan Monet in Paris. Monet visited his hometown of Le Havre in the Northwest of France in 1872 and proceeded to create a series of works depicting the port of Le Havre. ",
   "1872"
@@ -159,9 +170,9 @@ activeWork(
   promenade,
   "./media/thePromenade.jpg",
   `
-    <h5>The promenade,</h5>
+    <h5 class="title-smaller">The promenade,</h5>
     <h3>woman</h3>
-    <h5>with a parasol</h5>
+    <h5 class="title-smaller">with a parasol</h5>
     `,
   "Woman with a Parasol – Madame Monet and Her Son, sometimes known as The Stroll (French: La Promenade) is an oil-on-canvas painting by Claude Monet from 1875. The Impressionist work depicts his wife Camille Monet and their son Jean Monet in the period from 1871 to 1877 while they were living in Argenteuil, capturing a moment on a stroll on a windy summer’s day. The work is a genre painting of an everyday family scene, not a formal portrait. The work was painted outdoors, en plein air, and quickly, probably in a single period of a few hours . It measures 100 × 81 centimetres (39 × 32 in).",
   "1875"
