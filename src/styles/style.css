@@ -341,6 +341,7 @@ h5 {
 @media screen and (max-width: 1165px) {
   body, html {
     height: auto;
+    overflow: initial;
   }
   h1, h2, h3, h4, h5 {
     left: 0;
@@ -387,11 +388,15 @@ h5 {
     width: 100;
     margin: 0 auto;
   }
+  #close.show {
+    margin-top: -25px;
+  }
   #title {
     margin-right: 0;
     margin-top: 20px;
   }
   #selected-artwork {
+    margin: 0 30px !important;
     min-height: 100%;
     position: relative;
     height: -webkit-fit-content !important;
