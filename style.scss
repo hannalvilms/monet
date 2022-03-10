@@ -222,9 +222,6 @@ h5 {
   top: 25%;
 }
 @media screen and (min-width: 1800px) {
-  .pic img {
-    height: inherit;
-  }
   #selected-artwork.show img {
     width: 80%;
   }
@@ -241,6 +238,11 @@ h5 {
   }
   #artworks {
     justify-content: center;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .pic img {
+    height: inherit !important;
   }
 }
 @media screen and (max-width: 1165px) {

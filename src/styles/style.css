@@ -316,9 +316,6 @@ h5 {
 }
 
 @media screen and (min-width: 1800px) {
-  .pic img {
-    height: inherit;
-  }
   #selected-artwork.show img {
     width: 80%;
   }
@@ -335,6 +332,12 @@ h5 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .pic img {
+    height: inherit !important;
   }
 }
 
